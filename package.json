@@ -1,0 +1,18 @@
+{
+  "name": "degen-dictionary",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Searchable crypto slang dictionary + reply-card API/bot.",
+  "scripts": {
+    "dev": "npx --yes serve . -l 3000",
+    "api": "node server/api.mjs",
+    "bot": "python3 bot/bridge.py",
+    "validate": "node scripts/validate.mjs",
+    "test": "node server/parse-intent.test.mjs && node server/render.test.mjs && node server/reply.test.mjs",
+    "start": "node server/api.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "latest"
+  }
+}
